@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ife javascript base task</title>
+    <style type="text/css">
+        li{
+            list-style-type: none;
+            display: inline-block;
+            margin: 20px;
+            padding: 5px;
+            background-color: red;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <input type="text" id='val'>
+    <input type="button" value="左侧入">
+    <input type="button" value="右侧入" style="margin-right: 25px;">
+    <input type="button" value="左侧出">
+    <input type="button" value="右侧出">
+</div>
+
+<ul id='list'></ul>
+</body>
+
+<script type="text/javascript">
+
+
+
+window.onload = function () {
+    var ul = document.getElementById('list'),
+        btlist = document.getElementsByTagName('input'),
+        li = ul.childNodes;
+
+    var fn = {
+            str: [],
+
+            leftpush: function (num) {
+                this.str.unshift(num);
+                this.change();
+            },
+
+            rightpush: function (num) {
+                this.str.push(num);
+                this.change();
+            },
+
+            leftpop: function () {
+                this.str.shift();
+                this.change();
+            },
+
+            rightpop: function () {
+                this.str.pop();
+                this.change();
+            },
+
+            change: function() {
+                var str = "";
+                for (var i in this.str) {
+                    str += '<li>'+this.str[i]+'</li>';
+                }
+                ul.innerHTML = str;
+                addb();
+            },
+
+            delli: function(num) {
+                remove(num);
+                this.change();
+            }
+
+    };
+
+    function addb() {
+        for (var i = 0; i < li.length; i++) {
+            li[i].onclick = function (e) {
+                return function () {
+                    return fn.delli(e.target.innerHTML);
+                }(i);
+            };
+        }
+    }
+
+    function remove(num) {
+        for (j in fn.str) {
+            if (fn.str[j]==num) {
+                fn.str.splice(j, 1);
+            }
+        }
+    }
+
+    btlist[1].addEventListener('click', function () {
+        var num = btlist[0].value;
+        if (isNaN(num)) {
+            alert('请输入数字');
+        } else {
+            fn.leftpush(num);
+        }   
+    });
+
+    btlist[2].addEventListener('click', function () {
+        var num = btlist[0].value;
+        if (isNaN(num)) {
+            alert('请输入数字');
+        } else {
+            fn.rightpush(num);
+        }   
+    });
+
+    btlist[3].addEventListener('click', function () {
+        fn.leftpop();
+    });
+
+    btlist[4].addEventListener('click', function () {
+        fn.rightpop();
+    });
+}
+
+</script>
+</html>
