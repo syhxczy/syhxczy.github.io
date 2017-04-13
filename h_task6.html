@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ife</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		p{
+			font-size: 12px;
+		}
+		body{
+			background-color: #44565C;
+		}
+		.bg{
+			height: 1386px;
+			width: 892px;
+			background-color: #ffffff;
+			padding: 0 44px;
+			margin: 0 auto;
+		}
+		header{
+			position: relative;
+			margin-bottom: 30px;
+		}
+		header div{
+			background-color: #D55D5C;
+			height: 61px;
+			width: 110px;
+		}
+		header p{
+			position: absolute;
+			bottom: 5px;
+		}
+		.line_one{
+			border: 2px #938e8c solid;
+		}
+		.one{
+			position: relative;
+		}
+		.one div img{
+			height: 301px;
+		}
+		.img_left{
+			position: absolute;
+			left: 0;
+		}
+		.img_right{
+			position: absolute;
+			left: 450px;
+		}
+		.one .con{
+			position: absolute;
+			width: 203px;
+			height: 301px;
+			top: 0;
+			right: 0;
+		}
+		.line_two{
+			width: 203px;
+			border: 2px #cc8091 solid;
+		}
+		.one .con h2{
+			text-decoration: underline;
+		}
+		.one .con .num{
+			font-size: 116px;
+			color: #75b86b;
+		}
+		.one .con .sty p{
+			color: #cc8091;
+		}
+		.wwh{
+			width: 641px;
+			margin: 20px 0;
+		}
+		.wwh h2{
+			font-size: 16px;
+			text-decoration: underline;
+		}
+		.wwh div{
+			float: left;
+			margin-right: 30px;
+			margin-bottom: 20px;
+		}
+		.what{
+			width: 220px;
+		}
+		.when{
+			width: 190px;
+		}
+		.w3 span{
+			font-style: italic;
+			font-size: 12px;
+			color: #cd4a48;
+			opacity: 0.7;
+		}
+		.last{
+			clear: both;
+		}
+		.last .left{
+			width: 415px;
+			float: left;
+			margin-bottom: 20px;
+		}
+		.last .left .up p{
+			font-size: 42px;
+			color: #11456b;
+			margin-bottom: 30px;
+		}
+		.last .left .up p span{
+			font-size: 72px;
+			color: #f5e327;
+			font-style: initial;
+		}
+		.last .left .up hr{
+			border: 2px #11456b solid;
+			margin-bottom: 10px;
+		}
+		.last .left .down span{
+			float: left;
+			font-size: 70px;
+			color: #f5e327;
+			margin: 0 10px 0 0;
+		}
+		.last .left .down .par_two, .last .left .down .par_three{
+			text-indent: 2em;
+		}
+		.last .left .down img{
+			width: 226px;
+			height: 200px;
+			float: right;
+			padding: 15px;
+		}
+		.last .right{
+			width: 458px;
+			float: right;
+		}
+		.last .right .up{
+			position: relative;
+			height: 275px;
+		}
+		.last .right .up img{
+			width: 458px;
+			height: 275px;
+		}
+		.last .right .up div{
+			width: 458px;
+			height: 61px;
+			position: absolute;
+			bottom: 0;
+			background-color: rgba(0,0,0,0.3);
+		}
+		.last .right .up p{
+			position: absolute;
+			bottom: 10px;
+			margin-left: 50px;
+			padding-left: 10px;
+			border-left: 3px #72b16a solid;
+			height: 44px;
+		}
+		.last .right .up p .s1{
+			font-size: 26px;
+			color: #ffffff;
+		}
+		.last .right .up p .s2{
+			font-size: 12px;
+			color: #72b16a;
+			font-style: italic;
+		}
+		.last .right .down{
+			margin-top: 30px;
+			width: 459px;
+			height: 318px;
+			background-color: #EEEED6;
+		}
+		.last .right .test{
+			height: 118px;
+			padding: 20px 20px 0 20px;
+		}
+		.last .right .le{
+			float: left;
+			background-color: #D55D5C;
+			width: 260px;
+			height: 180px;
+		}
+		.last .right .le span{
+			float: left;
+			font-size: 110px;
+			padding: 10px;
+			color: #ffffff;
+		}
+		.last .right .le div{
+			float: left;
+			border-left: 2px #ffffff solid;
+			height: 86px;
+			margin-top: 41px; 
+		}
+		.last .right .le div .s1{
+			color: #ffffff;
+			font-style: italic;
+			font-size: 19px;
+			margin: 0 0 5px 5px;
+		}
+		.last .right .le div .s2{
+			color: #ffffff;
+			margin-left: 5px;
+		}
+		.last .right .ri{
+			float: right;
+			width: 190px;
+		}
+		.last .right .ri span{
+			color: #d45d5c;
+			font-size: 72px;
+		}
+		.last .right .ri .s1{
+			float: left;
+			height: 30px;
+			margin: -18px 10px 0 -40px;
+		}
+		.last .right .ri .s2{
+			float: right;
+		}
+		.last .right .ri p{
+			font-style: italic;
+			font-size: 14px;
+			color: #5a5b5b;
+		}
+		.mark_one{
+			margin-top: 10px;
+			padding: 10px;
+		}
+		.mark_word{
+			margin: 10px;
+		}
+		footer{
+			clear: both;
+			width: 892px;
+			border-top: 1px #938e8c solid;
+		}
+		footer p{
+			float: right;
+			color: #d45d5c;
+		}
+
+	</style>
+</head>
+<body>
+
+<div class="bg">
+	
+<header>
+	<div>
+		<p style="margin-left: 4px;color: #ffffff;">garfield13.cn</p>
+	</div>
+	<p style="right: 0;color: #DF7878;">2017.04</p>
+	<hr class="line_one">
+</header>
+
+<section class="one">
+	<div>
+		<img width="641px" src="p5g.jpg">
+		<img class="img_left" width="191px" src="green.png">
+		<img class="img_right" width="191px" src="red.png">
+	</div>
+	<div class="con">
+		<hr class="line_two">
+		<h2>ABOUT</h2>
+		<h2>PERSONA 5</h2>
+		<p>About persona 5 about persona 5 about persona 5</p>
+		<p class="num">700</p>
+		<div class="sty">
+			<p style="font-size: 45px">3.2</p>
+			<p style="font-size: 13px;margin: -45px 0 0 65px;">CSS</p>
+			<p style="margin: 0 65px;">csscsscss</p>
+		</div>
+	</div>
+</section>
+
+<section class="wwh">
+	<div class="what">
+		<h2 style="color: #418c59">what</h2>
+		<p>前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端</p>
+	</div>
+	<div class="when">
+		<h2 style="color: #d2994f">when</h2>
+		<p>前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端</p>
+	</div>
+	<div class="how">
+		<h2 style="color: #cc7680">how</h2>
+		<p>前端前端前端前端<br>前端前端前端前端前端<br>前端前端前端</p>
+	</div>
+	<div class="w3">
+		<p>What-------- <span>40%</span></p>
+		<p>What-------- <span>30%</span></p>
+		<p>What-------- <span>30%</span></p>
+	</div>
+</section>
+
+<section class="last">
+	<div class="left">
+		<div class="up">
+			<p><span>THE</span>TECHNOLOGE OF FRONT<br>前端技术领域</p>
+			<hr>
+		</div>
+		<div class="down">
+			<p><span>前</span>端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端。</p>
+			<img src="p5g.jpg">
+			<p class="par_two">端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端端前端前端前端前端前前端前端前端前端前端前端前端前端前端前端前端前端端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端端前端前端前端前端前端前端前端前端前端前端端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端。</p>
+			<p class="par_three">端前端前端前端前端前端前端前端前端前端前端前端前端前端前端端前端前端前端前端前端前端前端前端前端前前端端前端前端前端前端前端前端前端前端前端前端端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端端前端。</p>
+		</div>
+	</div>
+	<div class="right">
+		<div class="up">
+			<img src="p5g.jpg">
+			<div></div>
+			<p><span class="s1">前端技术</span><span class="s2">前端技术前端技术</span></p>
+		</div>
+		<div class="down">
+			<p class="test">
+				<span class="triangle"></span>
+				<span class="mark_one">前端前端前端前端前端前端 ...................</span>
+				<span class="mark_word">前端</span>
+			<br>
+				<span class="triangle"></span>
+				<span class="mark_one">前端前端前端前端前端前端 ...................</span>
+				<span class="mark_word">前端</span>
+			<br>
+				<span class="triangle"></span>
+				<span class="mark_one">前端前端前端前端前端前端 ...................</span>
+				<span class="mark_word">前端</span>
+			</p>
+			<div class="le">
+				<span>0</span>
+				<div>
+					<p class="s1">ONE TWO<br>THREE FOUR FIVE</p>
+					<p class="s2">hello world hello world<br>hello world</p>
+				</div>
+			</div>
+			<div class="ri">
+				<p>
+				<span class="s1">“</span>	
+				world hello world
+				hello world hello world
+				hello world hello world
+				hello world hello world
+				hello world hello world
+				hello world
+				<span class="s2">”</span> 
+				</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<footer>
+	<p>garfield13.cn</p>
+</footer>
+
+</div>
+
+</body>
+</html>
